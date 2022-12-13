@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import style from './home.module.css';
 import NewTodo from './NewTodo';
+import {v4 as uuidv4} from 'uuid';
 //add component
 import Todos from './Todos';
 
@@ -34,16 +35,17 @@ export default function Home() {
 
   ];
 
-  const [todos,setTodos]=useState(dummyTodos);
+  const [todos,setTodos]=useState([]);
 
-  const todoAdd=(newtodo)=>{
+  const todoAdd=(todo)=>{
 
     setTodos((oldTodo)=>{
 
-      return{...oldTodo,newtodo}
+      return[...oldTodo,{id:uuidv4(), todo}]
 
     
     })
+    console.log(todo);
 
 
   }
