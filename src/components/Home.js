@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import style from './home.module.css';
 import NewTodo from './NewTodo';
@@ -34,16 +34,29 @@ export default function Home() {
 
   ];
 
+  const [todos,setTodos]=useState(dummyTodos);
+
+  const todoAdd=(newtodo)=>{
+
+    setTodos((oldTodo)=>{
+
+      return{...oldTodo,newtodo}
+
+    
+    })
+
+
+  }
+
 
   return (
-
     <div className={style.container}>
 
         <h1 style={{ color:"white" }}>Todo App</h1>
 
-        <NewTodo/>
+        <NewTodo addTodo={todoAdd}/>
 
-        <Todos todos={dummyTodos}/>
+        <Todos todos={todos}/>
 
       
     </div>
