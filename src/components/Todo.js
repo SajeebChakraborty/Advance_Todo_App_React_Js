@@ -1,9 +1,11 @@
 import React from 'react'
 
+import style from './todo.module.css'
+
 export default function Todo(props) {
   const {id,title,desc}=props.todo
   return (
-    <article>
+    <article className={style.todo}>
         
         <div>
 
@@ -14,7 +16,7 @@ export default function Todo(props) {
 
         <div>
 
-            <button>
+            <button className={style.btn}>
 
                 <i className="fa fa-trash fa-2x"></i>
 

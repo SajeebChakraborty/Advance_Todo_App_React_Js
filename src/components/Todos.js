@@ -1,11 +1,13 @@
 import React from 'react'
 
+import style from './todos.module.css'
 //add component
 import Todo from './Todo'
 
 export default function Todos(props) {
   return (
-    <div>
+
+    <section className={style.todos}>
       
         {props.todos.map((todo)=> 
         
@@ -15,6 +17,6 @@ export default function Todos(props) {
         )}
 
 
-    </div>
+    </section>
   )
 }

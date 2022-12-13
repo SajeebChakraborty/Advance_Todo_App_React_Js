@@ -1,5 +1,6 @@
 import React from 'react'
 
+import style from './home.module.css';
 //add component
 import Todos from './Todos';
 
@@ -34,7 +35,10 @@ export default function Home() {
 
 
   return (
-    <div>
+
+    <div className={style.container}>
+
+        <h1 style={{ color:"white" }}>Todo App</h1>
 
         <Todos todos={dummyTodos}/>
 
