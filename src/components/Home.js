@@ -1,4 +1,6 @@
 import React from 'react'
+
+//add component
 import Todos from './Todos';
 
 export default function Home() {

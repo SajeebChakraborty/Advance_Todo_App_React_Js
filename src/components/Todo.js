@@ -12,6 +12,17 @@ export default function Todo(props) {
 
         </div>
 
+        <div>
+
+            <button>
+
+                <i className="fa fa-trash fa-2x"></i>
+
+            </button>
+
+
+        </div>
+
     </article>
   )
 }

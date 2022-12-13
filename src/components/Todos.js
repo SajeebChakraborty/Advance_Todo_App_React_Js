@@ -1,4 +1,6 @@
 import React from 'react'
+
+//add component
 import Todo from './Todo'
 
 export default function Todos(props) {
