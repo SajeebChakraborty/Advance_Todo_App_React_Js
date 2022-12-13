@@ -3,7 +3,18 @@ import React from 'react'
 import style from './todo.module.css'
 
 export default function Todo(props) {
-  const {id,title,desc}=props.todo
+  
+  const {title,desc}=props.todo;
+
+  const onHandleDelete=(id)=>{
+
+
+    alert(id);
+
+
+  }
+
+
   return (
     <article className={style.todo}>
         
@@ -16,7 +27,7 @@ export default function Todo(props) {
 
         <div>
 
-            <button className={style.btn}>
+            <button className={style.btn} onClick={()=>{onHandleDelete(props.id)}}>
 
                 <i className="fa fa-trash fa-2x"></i>
 
