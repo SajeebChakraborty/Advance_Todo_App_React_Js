@@ -29,7 +29,7 @@ export default function Todo(props) {
 
             <button className={style.btn} onClick={()=>{onHandleDelete(props.id)}}>
 
-                <i className="fa-solid fa-trash fa-2x"></i>
+                <i className="fa fa-trash fa-2x"></i>
 
             </button>
 
