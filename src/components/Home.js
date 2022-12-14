@@ -50,6 +50,14 @@ export default function Home() {
 
   }
 
+  const onhandleRemove=(id)=>{
+
+    const availableTodo= todos.filter((todo) => todo.id!=id);
+    setTodos(availableTodo);
+
+
+  }
+
 
   return (
     <div className={style.container}>
@@ -58,7 +66,7 @@ export default function Home() {
 
         <NewTodo addTodo={todoAdd}/>
 
-        <Todos todos={todos}/>
+        <Todos todos={todos} onRemovetodo={onhandleRemove}/>
 
       
     </div>

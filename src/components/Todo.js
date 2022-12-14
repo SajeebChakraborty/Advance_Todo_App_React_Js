@@ -9,7 +9,7 @@ export default function Todo(props) {
   const onHandleDelete=(id)=>{
 
 
-    alert(id);
+    props.onRemoveItem(id)
 
 
   }
